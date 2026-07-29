@@ -1,0 +1,198 @@
+# Orion Engineering Principles
+
+> "Engineering is not about making code work.
+> It is about building systems that remain understandable, maintainable, and reliable over time."
+
+---
+
+# Purpose
+
+This document captures the engineering principles discovered throughout **Project Orion**.
+
+Unlike language syntax or framework-specific features, these principles are technology-independent. They apply to Python, databases, Linux, cloud platforms, DevOps, and software engineering in general.
+
+Every milestone in Orion may introduce one or more new principles. Over time, this document will become the engineering philosophy behind the project.
+
+---
+
+# How to Use This Document
+
+For each new principle, record:
+
+- The principle itself
+- Why it exists
+- Examples from Orion
+- Examples from other technologies
+- Lessons learned while applying it
+
+---
+
+# Principle 1 — Explicit Is Better Than Implicit
+
+## Statement
+
+Always prefer explicit behavior over relying on defaults.
+
+## Why?
+
+Defaults differ between:
+
+- Operating systems
+- Programming languages
+- Database systems
+- Cloud platforms
+- Runtime environments
+
+Code that depends on defaults may work today but fail tomorrow in another environment.
+
+Being explicit makes software predictable, portable, and easier to maintain.
+
+## Orion Example
+
+```python
+with open(filename, "w", encoding="utf-8") as file:
+```
+
+instead of
+
+```python
+with open(filename, "w") as file:
+```
+
+## MySQL Example
+
+```sql
+CREATE DATABASE inventory
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_0900_ai_ci;
+```
+
+instead of relying on server defaults.
+
+## Linux Example
+
+Specify the complete path when appropriate:
+
+```bash
+/usr/bin/python3
+```
+
+instead of relying on PATH resolution in critical scripts.
+
+## Benefits
+
+- Predictability
+- Portability
+- Easier debugging
+- Consistent behavior
+- Better documentation
+
+---
+
+# Principle 2 — One Module, One Responsibility
+
+## Statement
+
+Each module should have one clear purpose.
+
+## Why?
+
+Small focused modules are easier to:
+
+- Understand
+- Test
+- Reuse
+- Replace
+- Maintain
+
+Changing one responsibility should not require modifying unrelated code.
+
+## Orion Example
+
+```
+inventory/
+
+    osinfo.py
+    cpu.py
+    writer.py
+```
+
+Responsibilities:
+
+- `osinfo.py` → Operating system information
+- `cpu.py` → CPU information
+- `writer.py` → Persist inventory data
+
+## Benefits
+
+- Loose coupling
+- High cohesion
+- Easier testing
+- Better maintainability
+
+---
+
+# Principle 3 — Main Orchestrates; Modules Implement
+
+## Statement
+
+The main application should coordinate work rather than perform it.
+
+## Why?
+
+The entry point should clearly describe the application's workflow while delegating implementation details to specialized modules.
+
+## Orion Example
+
+```python
+inventory = {
+    "os": get_os_info(),
+    "cpu": get_cpu_info(),
+}
+
+write_inventory(inventory)
+```
+
+The orchestration is obvious without reading implementation details.
+
+## Benefits
+
+- Readable program flow
+- Easier refactoring
+- Clear separation of concerns
+- Better scalability
+
+---
+
+# Principles Under Development
+
+The following principles will be added as Project Orion evolves.
+
+- Design before coding.
+- Evidence before assumptions.
+- Measure before optimizing.
+- Automate repetitive work.
+- Fail gracefully.
+- Prefer readability over cleverness.
+- Configuration belongs outside the code.
+- Logging is part of the application.
+- Test before trusting.
+- Documentation is part of engineering.
+
+---
+
+# Change Log
+
+| Version | Sprint | Added |
+|----------|--------|-------|
+| 1.0 | Sprint 01 – Milestone 4 | Initial Engineering Principles |
+
+---
+
+# Final Thought
+
+Technology changes rapidly.
+
+Engineering principles endure.
+
+The goal of Project Orion is not simply to learn Python, databases, or cloud technologies—it is to develop the mindset required to design and build reliable systems.
