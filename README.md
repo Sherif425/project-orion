@@ -160,6 +160,41 @@ This repository is intended for:
 * Students seeking practical, project-based learning
 
 ---
+# Projects
+# Inventory Collector
+
+## Overview
+
+## Features
+
+- Operating System Information
+- CPU Information
+- Disk Information
+- Network Information
+- JSON Export
+- Logging
+- Exception Handling
+
+## Project Structure
+
+## Example Output
+
+## Technologies Used
+
+- Python 3.14
+- Python Standard Library
+
+## Roadmap
+
+Sprint 02:
+- psutil
+- Better memory collection
+- Network interfaces
+- Multi-disk support
+
+
+
+---
 
 # Roadmap
 
