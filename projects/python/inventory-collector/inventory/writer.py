@@ -42,6 +42,6 @@ def write_inventory(
         with output_file.open("w", encoding="utf-8", ) as file:
             json.dump(data, file, indent=4,  ensure_ascii=False,)
     except (OSError, TypeError):
-        logger.exception("failed to write inventory file")
+        logger.exception(" Failed to write inventory file '%s .", output_file,)
         # print(f"failed to write invnetory file: {error}")
         raise

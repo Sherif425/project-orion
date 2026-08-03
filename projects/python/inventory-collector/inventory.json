@@ -9,4 +9,20 @@
     "cpu": {
         "logical_cores": 4
     },
-    "bad": 
+    "memory": {
+        "status": "Available in Sprint 02",
+        "platform": "Windows",
+        "note": "Detailed memory statistics require platform-specific APIs or the psutil package."
+    },
+    "disk": {
+        "path": "D:\\",
+        "total_gb": 806.64,
+        "used_gb": 616.43,
+        "free_gb": 190.21
+    },
+    "network": {
+        "hostname": "MyDataLab",
+        "fqdn": "MyDataLab",
+        "ip_address": "192.168.100.4"
+    }
+}
