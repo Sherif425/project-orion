@@ -7,6 +7,7 @@ def main():
     inventory = {
         "os": get_os_info(),
         "cpu": get_cpu_info(),
+        "bad": object,
         
     }
 

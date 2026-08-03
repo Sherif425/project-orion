@@ -1,6 +1,10 @@
 import json
 from pathlib import Path
 from typing import Any
+import logging
+
+
+logger = logging.getLogger(__name__)
 
 
 # def write_inventory(data, filename="inventory.json"):
@@ -37,6 +41,7 @@ def write_inventory(
     try:
         with output_file.open("w", encoding="utf-8", ) as file:
             json.dump(data, file, indent=4,  ensure_ascii=False,)
-    except (OSError, TypeError) as error:
-        print(f"failed to write invnetory file: {error}")
+    except (OSError, TypeError):
+        logger.exception("failed to write inventory file")
+        # print(f"failed to write invnetory file: {error}")
         raise
