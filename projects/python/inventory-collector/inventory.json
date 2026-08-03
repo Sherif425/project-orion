@@ -1,12 +1,12 @@
 {
     "os": {
-        "system": "Linux",
-        "release": "7.0.0-28-generic",
-        "version": "#28-Ubuntu SMP PREEMPT_DYNAMIC Sun Jun 21 01:01:36 UTC 2026",
-        "machine": "x86_64",
-        "python_version": "3.14.4"
+        "system": "Windows",
+        "release": "11",
+        "version": "10.0.26200",
+        "machine": "AMD64",
+        "python_version": "3.14.6"
     },
     "cpu": {
-        "logical_cores": 8
+        "logical_cores": 4
     }
 }
