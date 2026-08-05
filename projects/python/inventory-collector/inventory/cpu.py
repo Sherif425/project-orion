@@ -22,8 +22,8 @@ def get_cpu_info() -> dict[str, Any]:
         "usage_percent": psutil.cpu_percent(interval=1),
         "frequency": {
             "current_mhz": round(freq.current, 2) if freq else None,
-            "min_hhz": round(freq.min, 2) if freq else None,
-            "max_freq": round(freq.max, 2) if freq else None,
+            "min_mhz": round(freq.min, 2) if freq else None,
+            "max_mhz": round(freq.max, 2) if freq else None,
         },
 
     }

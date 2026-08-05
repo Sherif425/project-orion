@@ -1,69 +1,85 @@
 {
     "metadata": {
-        "generated_at": "2026-08-05T11:35:01.352980",
+        "generated_at": "2026-08-05T12:52:10",
         "collector_version": "0.2.0",
-        "python_version": "3.14.6"
+        "python_version": "3.13.14"
     },
     "os": {
         "system": "Windows",
         "release": "11",
-        "version": "10.0.26200",
+        "version": "10.0.22621",
         "machine": "AMD64",
-        "python_version": "3.14.6"
+        "python_version": "3.13.14"
     },
     "cpu": {
-        "physical_cores": 2,
-        "logical_cores": 4,
-        "usage_percent": 30.4,
+        "physical_cores": 14,
+        "logical_cores": 28,
+        "usage_percent": 5.6,
         "frequency": {
-            "current_mhz": 1601.0,
+            "current_mhz": 1200.0,
             "min_hhz": 0.0,
-            "max_freq": 1601.0
+            "max_freq": 2401.0
         }
     },
     "memory": {
         "virtual": {
-            "total_gb": 15.87,
-            "available_gb": 5.61,
-            "used_gb": 10.27,
-            "usage_percent": 64.7
+            "total_gb": 31.92,
+            "available_gb": 17.25,
+            "used_gb": 14.67,
+            "usage_percent": 46.0
         },
         "swap": {
-            "total_gb": 1.65,
-            "used_gb": 0.13,
-            "usage_percent": 7.9
+            "total_gb": 2.0,
+            "used_gb": 0.04,
+            "usage_percent": 2.0
         }
     },
     "disk": {
         "partitions": [
-            "D:\\",
-            "D:\\",
-            "NTFS",
-            "rw,fixed"
+            {
+                "device": "C:\\",
+                "mountpoint": "C:\\",
+                "filesystem": "NTFS",
+                "total_gb": 118.43,
+                "free_gb": 18.65,
+                "used_gb": 99.79,
+                "usage_percent": 84.3
+            },
+            {
+                "device": "D:\\",
+                "mountpoint": "D:\\",
+                "filesystem": "NTFS",
+                "total_gb": 931.5,
+                "free_gb": 444.54,
+                "used_gb": 486.95,
+                "usage_percent": 52.3
+            }
         ]
     },
     "network": {
-        "hostname": "MyDataLab",
-        "FQDN": "MyDataLab.home",
+        "hostname": "DevDataCenter",
+        "fqdn": "DevDataCenter",
         "interfaces": [
             "VPN - VPN Client",
-            "Local Area Connection* 1",
-            "Local Area Connection* 2",
+            "Ethernet",
+            "Local Area Connection* 13",
+            "Local Area Connection* 14",
             "VMware Network Adapter VMnet1",
             "VMware Network Adapter VMnet8",
-            "Wi-Fi",
-            "Bluetooth Network Connection",
+            "Wi-Fi 3",
+            "Bluetooth Network Connection 4",
             "Loopback Pseudo-Interface 1"
         ],
         "network_stats": {
-            "Bluetooth Network Connection": false,
+            "Ethernet": false,
             "VMware Network Adapter VMnet1": true,
             "VMware Network Adapter VMnet8": true,
+            "Bluetooth Network Connection 4": false,
             "Loopback Pseudo-Interface 1": true,
             "VPN - VPN Client": false,
-            "Wi-Fi": true,
-            "Local Area Connection* 1": false,
-            "Local Area Connection* 2": false
+            "Wi-Fi 3": true,
+            "Local Area Connection* 13": false,
+            "Local Area Connection* 14": false
         }
     }
 }

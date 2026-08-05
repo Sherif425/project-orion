@@ -14,7 +14,7 @@ def main() -> None:
 
     inventory = {
         "metadata": {
-        "generated_at": datetime.now().isoformat(),
+        "generated_at": datetime.now().isoformat(timespec="seconds"),
         "collector_version": "0.2.0",
         "python_version": platform.python_version(),
         },

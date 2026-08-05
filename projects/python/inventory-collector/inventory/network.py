@@ -29,7 +29,7 @@ def get_network_info() -> dict[str, Any]:
 
     return {
         "hostname": socket.gethostname(),
-        "FQDN": socket.getfqdn(),
+        "fqdn": socket.getfqdn(),
         "interfaces": list(psutil.net_if_addrs().keys()),
         "network_stats": {
             name: stats.isup

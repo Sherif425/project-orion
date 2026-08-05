@@ -1,0 +1,12 @@
+[collector]
+output_file = "inventory.json"
+pretty_print = true
+
+[logging]
+level = "INFO"
+
+[system]
+collect_network = true
+collect_disk = true
+collect_memory = true
+collect_cpu = true

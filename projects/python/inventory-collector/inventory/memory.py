@@ -23,6 +23,7 @@
 # memory module using psutil
 import psutil
 from typing import Any
+from inventory.utils import bytes_to_gb
 
 def get_memory_info() -> dict[str, Any]:
     """
@@ -34,14 +35,14 @@ def get_memory_info() -> dict[str, Any]:
 
     return {
         "virtual":{
-            "total_gb": round(vm.total / (1024**3), 2),
-            "available_gb": round(vm.available / (1024 **3), 2),
-            "used_gb": round(vm.used /(1024 ** 3), 2),
+            "total_gb": bytes_to_gb(vm.total),
+            "available_gb": bytes_to_gb(vm.available),
+            "used_gb": bytes_to_gb(vm.used),
             "usage_percent": vm.percent,
         },
         "swap":{
-            "total_gb": round(swap.total / (1024**3), 2),
-            "used_gb": round(swap.used / (1024**3), 2),
+            "total_gb": bytes_to_gb(swap.total),
+            "used_gb": bytes_to_gb(swap.used),
             "usage_percent": swap.percent,
         },
     }

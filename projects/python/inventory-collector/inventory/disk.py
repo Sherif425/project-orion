@@ -2,6 +2,7 @@ import psutil
 from pathlib import Path
 from shutil import disk_usage
 from typing import Any
+from inventory.utils import bytes_to_gb
 
 def get_disk_info() -> dict["str", Any]:
     """
@@ -32,11 +33,12 @@ def get_disk_info() -> dict["str", Any]:
                 "device": partition.device,
                 "mountpoint": partition.mountpoint,
                 "filesystem": partition.fstype,
-                "total_gb": round(usage.total / (1024**3), 2),
-                "free_gb": round(usage.free / (1024**3), 2),
+                "total_gb": bytes_to_gb(usage.total),
+                "free_gb": bytes_to_gb(usage.free),
+                "used_gb": bytes_to_gb(usage.used),
                 "usage_percent": usage.percent,
             })
         except PermissionError:
             continue
 
-    return {"partitions": partition}
+    return {"partitions": partitions}
