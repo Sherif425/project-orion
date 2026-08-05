@@ -7,22 +7,37 @@
         "python_version": "3.14.6"
     },
     "cpu": {
-        "logical_cores": 4
+        "physical_cores": 2,
+        "logical_cores": 4,
+        "usage_percent": 100.0,
+        "frequency": {
+            "current_mhz": 1601.0,
+            "min_hhz": 0.0,
+            "max_freq": 1601.0
+        }
     },
     "memory": {
-        "status": "Available in Sprint 02",
-        "platform": "Windows",
-        "note": "Detailed memory statistics require platform-specific APIs or the psutil package."
+        "virtual": {
+            "total_gb": 15.87,
+            "available_gb": 5.78,
+            "used_gb": 10.09,
+            "usage_percent": 63.6
+        },
+        "swap": {
+            "total_gb": 1.65,
+            "used_gb": 0.09,
+            "usage_percent": 5.6
+        }
     },
     "disk": {
         "path": "D:\\",
         "total_gb": 806.64,
-        "used_gb": 616.43,
-        "free_gb": 190.21
+        "used_gb": 471.5,
+        "free_gb": 335.14
     },
     "network": {
         "hostname": "MyDataLab",
-        "fqdn": "MyDataLab",
-        "ip_address": "192.168.100.4"
+        "fqdn": "MyDataLab.home",
+        "ip_address": "192.168.1.2"
     }
 }
