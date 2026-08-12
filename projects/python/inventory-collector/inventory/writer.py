@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 # defining the function with type hints
 def write_inventory(
     data: dict[str, Any],
-    filename: str = "inventory.json",
+    output_file: str = "inventory.json",
     ) -> None:
 
     """
@@ -26,7 +26,7 @@ def write_inventory(
 
     Args:
         data: Invnetory data to serialize.
-        filename: Output JSON filename.
+        output_file: Output JSON filename.
 
     Raises:
         OSError: If the file cannot be written.
@@ -36,7 +36,7 @@ def write_inventory(
     # project_root = Path(__file__).parent.parent
     # introducing named variable, it converts the path to its canonical absolute form
     project_root = Path(__file__).resolve().parent.parent
-    output_file = project_root / filename
+    output_file = project_root / output_file
 
     try:
         with output_file.open("w", encoding="utf-8", ) as file:

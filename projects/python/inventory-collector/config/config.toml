@@ -1,12 +1,14 @@
 [collector]
+version = "0.2.0"
 output_file = "inventory.json"
 pretty_print = true
 
 [logging]
 level = "INFO"
 
-[system]
-collect_network = true
-collect_disk = true
-collect_memory = true
+[features]
+collect_os = true
 collect_cpu = true
+collect_memory = true
+collect_disk = false
+collect_network = false
