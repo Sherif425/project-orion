@@ -71,7 +71,7 @@ def main() -> None:
 
     write_inventory(
         inventory,
-        output_file=config["collector"]["output_file"],
+        output_file=output_file,
     )
     
 

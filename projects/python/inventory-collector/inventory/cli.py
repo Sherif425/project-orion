@@ -11,7 +11,11 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--output",
         type=str,
+<<<<<<< HEAD
         default= None,
+=======
+        default=None,
+>>>>>>> 7544b3ff25569fa0649e0e7d7d353c63847014b9
         help="Output JSON filename (default: inventory.json)",
     )
 

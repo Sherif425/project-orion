@@ -1,0 +1,32 @@
+{
+    "os": {
+        "system": "Windows",
+        "release": "11",
+        "version": "10.0.26200",
+        "machine": "AMD64",
+        "python_version": "3.14.3"
+    },
+    "cpu": {
+        "physical_cores": 4,
+        "logical_cores": 4,
+        "usage_percent": 15.3,
+        "frequency": {
+            "current_mhz": 3201.0,
+            "min_mhz": 0.0,
+            "max_mhz": 3201.0
+        }
+    },
+    "memory": {
+        "virtual": {
+            "total_gb": 31.88,
+            "available_gb": 12.71,
+            "used_gb": 19.17,
+            "usage_percent": 60.1
+        },
+        "swap": {
+            "total_gb": 2.0,
+            "used_gb": 0.14,
+            "usage_percent": 7.0
+        }
+    }
+}

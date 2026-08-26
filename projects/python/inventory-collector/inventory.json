@@ -4,9 +4,10 @@
         "release": "11",
         "version": "10.0.22621",
         "machine": "AMD64",
-        "python_version": "3.14.6"
+        "python_version": "3.14.3"
     },
     "cpu": {
+<<<<<<< HEAD
         "physical_cores": 14,
         "logical_cores": 28,
         "usage_percent": 1.8,
@@ -14,10 +15,20 @@
             "current_mhz": 1200.0,
             "min_mhz": 0.0,
             "max_mhz": 2401.0
+=======
+        "physical_cores": 4,
+        "logical_cores": 4,
+        "usage_percent": 8.9,
+        "frequency": {
+            "current_mhz": 3201.0,
+            "min_mhz": 0.0,
+            "max_mhz": 3201.0
+>>>>>>> 7544b3ff25569fa0649e0e7d7d353c63847014b9
         }
     },
     "memory": {
         "virtual": {
+<<<<<<< HEAD
             "total_gb": 31.92,
             "available_gb": 9.78,
             "used_gb": 22.15,
@@ -27,6 +38,17 @@
             "total_gb": 2.0,
             "used_gb": 0.2,
             "usage_percent": 9.8
+=======
+            "total_gb": 31.88,
+            "available_gb": 12.66,
+            "used_gb": 19.21,
+            "usage_percent": 60.3
+        },
+        "swap": {
+            "total_gb": 2.0,
+            "used_gb": 0.14,
+            "usage_percent": 7.0
+>>>>>>> 7544b3ff25569fa0649e0e7d7d353c63847014b9
         }
     }
 }
