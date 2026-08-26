@@ -15,11 +15,22 @@ def main() -> None:
 
     configure_logging()
     config = load_config()
+    print(config)
     args = parse_arguments()
+
+    print(args)
+
+    pretty = (
+        args.pretty
+        if args.pretty is not None
+        else config["collector"]["pretty_print"]
+    )
+
+    print("resolved pretty:", pretty)
 
     output_file = (
         args.output
-        if args.output
+        if args.output is not None
         else config["collector"]["output_file"]
     )
 
@@ -46,10 +57,17 @@ def main() -> None:
         inventory["memory"] = get_memory_info()
     if config["features"]["collect_disk"]:
         inventory["disk"] = get_disk_info()
-    if config["features"]["collect_network"]:
-        inventory["network"] = get_network_info()
+    # if config["features"]["collect_network"]:
+    #     inventory["network"] = get_network_info()
 
-    pprint(inventory)
+    if (
+        config["features"]["collect_network"]
+        and not args.no_network
+    ):
+        inventory["network"] = get_network_info()
+    
+    if args.pretty:
+        pprint(inventory)
 
     write_inventory(
         inventory,

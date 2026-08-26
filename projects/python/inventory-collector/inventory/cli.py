@@ -11,7 +11,7 @@ def parse_arguments() -> argparse.Namespace:
     parser.add_argument(
         "--output",
         type=str,
-        default="inventory.json",
+        default= None,
         help="Output JSON filename (default: inventory.json)",
     )
 
@@ -19,12 +19,14 @@ def parse_arguments() -> argparse.Namespace:
         "--pretty",
         # type=str,
         action="store_true",
+        default=None,
         help="Pretty-print the output JSON (default: False)",
     )
 
     parser.add_argument(
         "--no-network",
         action="store_true",
+        default=None,
         help="Disable network information collection",
     )
 

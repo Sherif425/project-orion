@@ -1,7 +1,7 @@
 [collector]
 version = "0.2.0"
 output_file = "inventory.json"
-pretty_print = true
+pretty_print = false
 
 [logging]
 level = "INFO"
